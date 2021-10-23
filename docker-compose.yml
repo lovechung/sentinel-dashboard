@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  sentinel:
+    container_name: sentinel
+    image: registry.cn-shanghai.aliyuncs.com/jicco/sentinel-dashboard
+    restart: always
+    ports:
+      - "8080:8080"
+    volumes:
+      - /data/sentinel/logs:/root/logs
